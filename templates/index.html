@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+    <title>Weather</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#"><button>Sign Up</button></a></li>
+            </ul>
+
+        </div>
+        
+        <div class="mainpage">
+            <div class="from">
+                <form action="{{ url_for('submit')}}" method="post">
+                    <span>
+                        <h1>Weather App</h1>
+                    </span>
+                    <span>
+                        <input type="text" name="cityname" placeholder="Enter a City">
+                    </span>
+                    <span>
+                        <input type="text" name="countrycode" placeholder="CountryCode  ex. IN(India) ">
+                    </span>
+                    <span class="button">
+                        <button type="submit">Submit</button>
+                    </span>
+                </form>
+           </div>
+        </div>
+    </div>
+</body>
+</html>

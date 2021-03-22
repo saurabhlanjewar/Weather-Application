@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style1.css') }}">
+</head>
+<body>
+    <div class="contianer">
+        <div class="widget">
+            <h2>{{city_name}}</h2>
+            <div class="temperature">
+                {{temp_txt}}°C
+            </div>
+            <div class="other">
+                <div class="summary">
+                    <p class="summaryText">{{weather_txt}}</p>
+
+                </div>
+                <div class="humidity">
+                    Humidity : {{humid_txt}}  
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
