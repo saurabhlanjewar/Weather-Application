@@ -1,9 +1,6 @@
 import requests
 
 
-KEY = "fe5db51eab7a23ea14df3c761d99ca76"
-
-
 
 # Making request to server for data 
 def makeRequest(cityname , countrycode):
