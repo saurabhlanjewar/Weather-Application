@@ -22,4 +22,7 @@ def submit():
 
 	return render_template("layout.html",temp_txt=temp_txt,city_name=city_name ,humid_txt=humid_txt,weather_txt=weather_txt)
 
+if __name__ == "__main__":
+	app.run(debug=True)
+
 
