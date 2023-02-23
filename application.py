@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from webrequest import makeRequest, temp, humid, weather
+import os
 
 
 app = Flask(__name__)
@@ -23,6 +24,6 @@ def submit():
 	return render_template("layout.html",temp_txt=temp_txt,city_name=city_name ,humid_txt=humid_txt,weather_txt=weather_txt)
 
 if __name__ == "__main__":
-	app.run(debug=True)
+	app.run(debug=True, port=os.getenv("PORT", default=5000))
 
 
